@@ -11,24 +11,21 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = (array) => {
-  if (array.length === 0) {
-    return undefined;
+const average = (numbers) => {
+  const size = numbers.length;
+  if (size === 0) {
+    return;
   }
 
-  for (let index = 0; index < array.length; index += 1) {
-    if (typeof array[index] !== 'number') {
-      return undefined;
-    }
-  }
   let soma = 0;
-
-  for (let index = 0; index < array.length; index += 1) {
-    soma += array[index];
+  for (const number of numbers) {
+    if (typeof number !== 'number') {
+      return;
+    }
+    soma += number;
   }
 
-  let media = Math.round(soma / array.length);
- 
+  const media = Math.round(soma / size);
   return media;
 };
 
