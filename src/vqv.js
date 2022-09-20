@@ -20,7 +20,7 @@
 
 const vqv = (name, age) => {
   if (!name || !age) {
-    return undefined;
+    return;
   }
 
   const message = `Oi, meu nome é ${name}!
